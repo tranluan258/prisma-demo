@@ -11,6 +11,7 @@ export class UserService {
       data: user,
     });
   }
+
   async findUsers(params: {
     skip?: number;
     take?: number;
