@@ -7,12 +7,11 @@ on:
       - master
 jobs:
   pm2-configuration:
-    #runner, This job will be running in runner with Ubuntu Server latest version.
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3 #checkout code from repository, so we code downloaded in runner.
-      - uses: actions/setup-node@v3 #setup nodejs in our runner
-      - run: npm install pm2@latest -g #install pm2 global
-      - run: pm2 -V #check pm2 version
-      - run: pm2 list #check pm2 list
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: npm install pm2@latest -g
+      - run: pm2 -V
+      - run: pm2 list
       - run: pm2 restart ecosystem.config.js
