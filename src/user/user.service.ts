@@ -20,6 +20,9 @@ export class UserService {
     const { where } = params;
     return this.prisma.user.findMany({
       where,
+      include: {
+        profile: true,
+      },
     });
   }
 
