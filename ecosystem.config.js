@@ -9,8 +9,8 @@ module.exports = {
 
   deploy : {
     production : {
-      user : 'root',
-      host : '27.71.230.17',
+      user : 'TRANLUAN',
+      host : '192.168.1.90',
       ref  : 'origin/master',
       repo : 'https://github.com/tranluan258/prisma-demo.git',
       path : '.',
