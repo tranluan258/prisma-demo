@@ -15,7 +15,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'https://github.com/tranluan258/prisma-demo.git',
       path: '/home/tluan/prisma-demo',
-      'post-setup': 'git stash yarn add && yarn build &&  pm2 start ecosystem.config.js --env production',
+      'post-setup': 'yarn add && yarn build &&  pm2 start ecosystem.config.js --env production',
       'post-deploy': 'yarn add && yarn build &&  pm2 reload ecosystem.config.js --env production',
       "ssh_options": [
         "StrictHostKeyChecking=no",
